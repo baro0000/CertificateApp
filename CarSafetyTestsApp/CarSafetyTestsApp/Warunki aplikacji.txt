@@ -1,0 +1,9 @@
+﻿Aplikacja do obliczania wartości ocen testów bezpieczeństwa prototypów aut.
+
+Warunki:
+1. Każdy prototyp to osobna klasa zawierająca dane takie jak: nazwa producenta, fabryka i nazwa prototypu.
+2. Klasa prototypu umożliwia wprowadzanie ocen typu float z przedziału od 0 do 10 do listy ocen.
+3. Klasa prototypu umożliwia generowanie statystyk.
+4. Klasa statystyk umożliwia wyszczególnienie danych takich jak najniższa ocena, najwyższa ocena, średnia, średnia jako litera.
+5. Klasa statystyk zawiera właściwość i metodę, która określa czy dany prototyp może uzyskać już certyfikat poświadczający jego bezpieczeństwo (wymagany do rozpoczęcia masowej produkcji)
+6. Pojazd może uzyskać certyfikat, jeśli uzyskał oceny z 5 testów, oraz średnia jego ocen wynosi powyżej 5.0. Dodatkowo żadna z ocen z odbytych testów nie może być niższa niż 2.0.
