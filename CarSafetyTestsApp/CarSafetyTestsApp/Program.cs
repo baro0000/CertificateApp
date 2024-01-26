@@ -28,7 +28,7 @@ while (true)
     }
     catch (Exception ex)
     {
-        printRedMessage($"Problem occured! {ex.Message}");
+        PrintRedMessage($"Problem occured! {ex.Message}");
     }
 }
 
@@ -39,12 +39,12 @@ try
 }
 catch (Exception ex)
 {
-    printRedMessage(ex.Message);
+    PrintRedMessage(ex.Message);
 }
 
 
 
-static void printRedMessage(string message)
+static void PrintRedMessage(string message)
 {
     Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine(message);
