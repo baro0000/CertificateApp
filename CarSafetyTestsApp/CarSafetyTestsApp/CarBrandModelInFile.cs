@@ -32,56 +32,6 @@
                 }
             }
         }
-
-        public override void AddGrade(int grade)
-        {
-            AddGrade((float)grade);
-        }
-
-        public override void AddGrade(string grade)
-        {
-            if (float.TryParse(grade, out var gradeInFloat))
-            {
-                AddGrade(gradeInFloat);
-            }
-            else
-            {
-                throw new Exception("Character sequence was provided cannot be converted into a number.");
-            }
-        }
-
-        public override void AddGrade(char grade)
-        {
-            switch (grade)
-            {
-                case 'A':
-                case 'a':
-                    AddGrade(10.0f);
-                    break;
-                case 'B':
-                case 'b':
-                    AddGrade(8.0f);
-                    break;
-                case 'C':
-                case 'c':
-                    AddGrade(6.0f);
-                    break;
-                case 'D':
-                case 'd':
-                    AddGrade(4.0f);
-                    break;
-                case 'E':
-                case 'e':
-                    AddGrade(2.0f);
-                    break;
-                case 'F':
-                case 'f':
-                    AddGrade(0.0f);
-                    break;
-                default:
-                    throw new Exception("Out of range! Proper letter grade is from A to F.");
-            }
-        }
         private List<float> ReadGradesFromFileToList()
         {
             List<float> resultList = new List<float>();

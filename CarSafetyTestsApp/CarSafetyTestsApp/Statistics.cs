@@ -47,15 +47,6 @@
             this.PassedOrFailed = 0;
         }
 
-        public Statistics(int empty)
-        {
-            this.Max = 0;
-            this.Min = 0;
-            this.Sum = 0;
-            this.Count = 0;
-            this.PassedOrFailed = 0;
-        }
-
         public void AddGrade(float grade)
         {
             this.Sum += grade;
@@ -82,12 +73,12 @@
 
         public void PrintStatistics()
         {
-            string PassOrFail = PassedOrFailed == 1 ? "Zaliczony" : "Niezaliczony";
+            string passOrFail = PassedOrFailed == 1 ? "Zaliczony" : "Niezaliczony";
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Średnia ocena z {this.Count} testów wynosi: {this.Average:F2}. Oznaczenie literowe: {this.AverageAsLetter}");
             Console.WriteLine($"Najwyższa uzyskana ocena to: {this.Max}");
             Console.WriteLine($"Najniższa uzyskana ocena to: {this.Min}");
-            Console.WriteLine($"Certyfikat: {PassOrFail}");
+            Console.WriteLine($"Certyfikat: {passOrFail}");
             Console.ResetColor();
         }
     }

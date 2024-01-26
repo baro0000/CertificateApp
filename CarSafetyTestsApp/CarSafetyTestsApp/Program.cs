@@ -3,9 +3,9 @@
 Console.WriteLine("Witaj w programie Car Safety Tests. By zakończyć wprowadź \"q\".");
 
 
-var CarPrototype = new CarBrandModelInFile("Mercedes-Benz", "Mercedesstraße 1, 21079 Hamburg, Niemcy", "VISION EQXX v. 3.15");
-CarPrototype.NewGradeAdded += confirmAddedGrade;
-void confirmAddedGrade(object sender, EventArgs args)
+var carPrototype = new CarBrandModelInFile("Mercedes-Benz", "Mercedesstraße 1, 21079 Hamburg, Niemcy", "VISION EQXX v. 3.15");
+carPrototype.NewGradeAdded += ConfirmAddedGrade;
+void ConfirmAddedGrade(object sender, EventArgs args)
 {
     Console.WriteLine("Grade succesfully added.");
 }
@@ -24,7 +24,7 @@ while (true)
 
     try
     {
-        CarPrototype.AddGrade(input);
+        carPrototype.AddGrade(input);
     }
     catch (Exception ex)
     {
@@ -34,7 +34,7 @@ while (true)
 
 try
 {
-    Statistics statsCarPrototype = CarPrototype.GetStatistics();
+    Statistics statsCarPrototype = carPrototype.GetStatistics();
     statsCarPrototype.PrintStatistics();
 }
 catch (Exception ex)
