@@ -13,5 +13,15 @@ namespace MotoApp.Repositories
             _dbContext = dbContext;
             _dbSet = _dbContext.Set<Employee>();
         }
+
+        public Employee? GetById(int id)
+        {
+            return _dbSet.Find(id);
+        }
+
+        public void Add(Employee item)
+        {
+            _dbSet.Add(item);
+        }
     }
 }
